@@ -11,6 +11,7 @@ class EntriesController < ApplicationController
   end
 
   def new
+    @entry = Entry.new
     render :new
   end
 
