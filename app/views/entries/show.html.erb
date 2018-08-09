@@ -2,6 +2,6 @@
 
 <article class="entry">
   <h1><%= @entry.word.titlecase %> (<%= @entry.language.upcase %>)</h1>
-  <%= link_to "Edit", edit_entry_path %>
+  <%= link_to "Edit", edit_entry_path %> | <%= link_to "Delete", entry_path(@entry), method: :delete, data: {confirm: "Are you sure?"} %>
   <p><%= @entry.definition.capitalize %></p>
 </article>

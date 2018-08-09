@@ -48,7 +48,9 @@ class EntriesController < ApplicationController
     end
   end
 
-  def destory
+  def destroy
+    @entry = Entry.find(params[:id])
+    @entry.destroy
     redirect_to entries_url
   end
 end
