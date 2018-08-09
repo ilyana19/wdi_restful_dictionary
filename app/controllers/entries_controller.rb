@@ -16,7 +16,17 @@ class EntriesController < ApplicationController
   end
 
   def create
-    redirect_to entries_url
+    @entry = Entry.new
+
+    @entry.word = params[:entry][:word]
+    @entry.language = params[:entry][:language]
+    @entry.definition = params[:entry][:definition]
+
+    if @entry.save
+      redirect_to entries_url
+    else
+      render :new
+    end
   end
 
   def edit
