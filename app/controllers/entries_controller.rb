@@ -35,7 +35,17 @@ class EntriesController < ApplicationController
   end
 
   def update
-    redirect_to entry_url(params[:id])
+    @entry = Entry.find(params[:id])
+
+    @entry.word = params[:entry][:word]
+    @entry.language = params[:entry][:language]
+    @entry.definition = params[:entry][:definition]
+
+    if @entry.save
+      redirect_to entry_url(params[:id])
+    else
+      redirect_to :edit
+    end
   end
 
   def destory
