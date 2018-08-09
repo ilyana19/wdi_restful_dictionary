@@ -2,5 +2,6 @@
 
 <article class="entry">
   <h1><%= @entry.word.titlecase %> (<%= @entry.language.upcase %>)</h1>
+  <%= link_to "Edit", edit_entry_path %>
   <p><%= @entry.definition.capitalize %></p>
 </article>

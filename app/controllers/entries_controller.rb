@@ -30,6 +30,7 @@ class EntriesController < ApplicationController
   end
 
   def edit
+    @entry = Entry.find(params[:id])
     render :edit
   end
 

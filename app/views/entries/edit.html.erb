@@ -1,1 +1,6 @@
-<p>Edit Entry</p>
+<%= link_to 'Back to Main', entries_url %> |
+<%= link_to 'Back to Entry', entry_url %>
+
+<h1>Edit Entry</h1>
+
+<%= render 'form', entry: @entry %>

@@ -2,21 +2,4 @@
 
 <h1>New Entry</h1>
 
-<%= form_for @entry do |f| %>
-  <p>
-    <%= f.label :word %>:
-    <%= f.text_field :word %>
-  </p>
-
-  <p>
-    <%= f.label :language %>:
-    <%= f.text_field :language %>
-  </p>
-
-  <p>
-    <%= f.label :definition %>:
-    <%= f.text_area :definition, size: '30x10' %>
-  </p>
-
-  <p><%= f.submit %></p>
-<% end %>
+<%= render 'form', entry: @entry %>
