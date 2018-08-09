@@ -1,1 +1,6 @@
-<p>This page will display information about entry number <%= params[:id] %></p>
+<%= link_to 'Back to Main', entries_url %>
+
+<article class="entry">
+  <h1><%= @entry.word.titlecase %> (<%= @entry.language.upcase %>)</h1>
+  <p><%= @entry.definition.capitalize %></p>
+</article>

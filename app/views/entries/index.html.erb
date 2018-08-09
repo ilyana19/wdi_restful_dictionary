@@ -3,8 +3,9 @@
 <% @entries.each do |entry| %>
   <article class="entry">
     <p>
-      <strong><%= entry.word.titlecase %> (<%= entry.language.upcase %>)</strong> <br>
-      <%= entry.definition.capitalize %>
+      <strong><%= entry.word.titlecase %> (<%= entry.language.upcase %>)</strong> -
+      <%= link_to "View Definition", entry_path(entry) %>
+      <!-- <%= entry.definition.capitalize %> -->
     </p>
   </article>
 <% end %>
